@@ -107,37 +107,37 @@
     </appender>
 
 
-    <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-        <destination>101.43.11.226:5044</destination>
-        <!-- 日志输出编码 -->
-        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder">
-            <pattern>
-                <pattern>
-                    {
-                    <!--es索引名称 -->
-                    "index":"elk",
-                    <!--应用名称 -->
-                    "appName":"${spring.application.name}",
-                    <!--打印时间 -->
-                    "timestamp": "%d{yyyy-MM-dd HH:mm:ss.SSS}",
-                    <!--线程名称 -->
-                    "thread": "%thread",
-                    <!--日志级别 -->
-                    "level": "%level",
-                    <!--日志名称 -->
-                    "logger_name": "%logger",
-                    <!--日志信息 -->
-                    "message": "%msg",
-                    <!--日志堆栈 -->
-                    "stack_trace": "%exception"
-                    }
-                </pattern>
-            </pattern>
-        </encoder>
-    </appender>
+<!--    <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">-->
+<!--        <destination>101.43.11.226:5044</destination>-->
+<!--        &lt;!&ndash; 日志输出编码 &ndash;&gt;-->
+<!--        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder">-->
+<!--            <pattern>-->
+<!--                <pattern>-->
+<!--                    {-->
+<!--                    &lt;!&ndash;es索引名称 &ndash;&gt;-->
+<!--                    "index":"elk",-->
+<!--                    &lt;!&ndash;应用名称 &ndash;&gt;-->
+<!--                    "appName":"${spring.application.name}",-->
+<!--                    &lt;!&ndash;打印时间 &ndash;&gt;-->
+<!--                    "timestamp": "%d{yyyy-MM-dd HH:mm:ss.SSS}",-->
+<!--                    &lt;!&ndash;线程名称 &ndash;&gt;-->
+<!--                    "thread": "%thread",-->
+<!--                    &lt;!&ndash;日志级别 &ndash;&gt;-->
+<!--                    "level": "%level",-->
+<!--                    &lt;!&ndash;日志名称 &ndash;&gt;-->
+<!--                    "logger_name": "%logger",-->
+<!--                    &lt;!&ndash;日志信息 &ndash;&gt;-->
+<!--                    "message": "%msg",-->
+<!--                    &lt;!&ndash;日志堆栈 &ndash;&gt;-->
+<!--                    "stack_trace": "%exception"-->
+<!--                    }-->
+<!--                </pattern>-->
+<!--            </pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
 
     <root level="INFO">
-        <appender-ref ref="LOGSTASH"/>
+<!--        <appender-ref ref="LOGSTASH"/>-->
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="DEBUG_FILE"/>
         <appender-ref ref="INFO_FILE"/>

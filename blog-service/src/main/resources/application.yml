@@ -69,14 +69,14 @@ mybatis-plus:
       field-strategy: NOT_NULL
       logic-delete-value: 1
       logic-not-delete-value: 0
-ribbon:
-  ConnectTimeout: 30000
-  MaxAutoRetriesNextServer: 0
-  ReadTimeout: 30000
-  ServerListRefreshInterval: 15000
 upload:
   file:
     path: /data/file/images
 jwt:
   private.key: classpath:app.key
   public.key: classpath:app.pub
+
+deepseek:
+  api:
+    key: sk-a47f211da6294b73a17e9f8fe2179b76
+    url: https://api.deepseek.com/v1/chat/completions
