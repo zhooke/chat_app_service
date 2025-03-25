@@ -51,7 +51,7 @@ public class ThreadDay01 {
         //由数组组成的有界阻塞队列
         ArrayBlockingQueue<T> arrayBlockingQueue = new ArrayBlockingQueue<T>(10);
         //由链表组成的有界阻塞队列
-        LinkedBlockingQueue<T> linkedBlockingQueue = new LinkedBlockingQueue<>(10);
+        LinkedBlockingQueue<T> linkedBlockingQueue = new LinkedBlockingQueue<>();
         //支持优先级排序的无界阻塞队列
         PriorityBlockingQueue<T> priorityBlockingQueue = new PriorityBlockingQueue<>();
         //使用优先级队列实现的无界阻塞队列
