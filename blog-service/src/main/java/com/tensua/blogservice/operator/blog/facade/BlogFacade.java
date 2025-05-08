@@ -64,6 +64,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
@@ -206,7 +207,7 @@ public class BlogFacade {
      * @param request
      * @return
      */
-    @Transactional
+    @Transactional(propagation = Propagation.REQUIRED)
     public Boolean addBlog(BlogRequest request) {
         BlogList blogList = new BlogList();
         BeanUtils.copyProperties(request, blogList);

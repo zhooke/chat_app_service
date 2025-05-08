@@ -2,6 +2,7 @@ package com.tensua.blogservice.operator.ai.facade;
 
 import com.tensua.blogservice.data.request.ai.ChatRequest;
 import com.tensua.blogservice.data.response.ai.ChatResponse;
+import com.tensua.blogservice.data.system.UserBeanRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -22,7 +23,7 @@ public class AiFacade {
     private WebClient webClient;
 
 
-    public String chat(String userMessage) {
+    public String chat(String userMessage, UserBeanRequest userBeanRequest) {
         ChatRequest request = new ChatRequest(
                 "deepseek-chat",
                 List.of(new ChatRequest.Message("user", userMessage))

@@ -1,6 +1,7 @@
 package com.tensua.blogservice.operator.ai.controller;
 
 import com.tensua.blogservice.data.BaseResult;
+import com.tensua.blogservice.data.system.UserBeanRequest;
 import com.tensua.blogservice.operator.ai.facade.AiFacade;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,10 +21,10 @@ public class AiController {
     @Resource
     private AiFacade aiFacade;
 
-    @PostMapping
-    public BaseResult<String> chat(@RequestBody String message) {
+    @PostMapping("/deepSeek")
+    public BaseResult<String> chat(@RequestBody String message, UserBeanRequest userBeanRequest) {
         try {
-            String response = aiFacade.chat(message);
+            String response = aiFacade.chat(message, userBeanRequest);
             return BaseResult.succeed(response);
         } catch (Exception e) {
             return BaseResult.failed(e.getMessage());
