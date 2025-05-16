@@ -6,9 +6,9 @@ spring:
       eager: true
 #    web-application-type: reactive
   datasource:
-    url: ${spring.datasource.ip}
-    username: ${spring.datasource.username}
-    password: ${spring.datasource.password}
+    url: jdbc:p6spy:mysql://8.148.67.7:35227/blog_schema
+    username: blog_user
+    password: b904ed291abb4425a48eb4c639c4a1d3
     driver-class-name: com.p6spy.engine.spy.P6SpyDriver
     druid:
       filters: stat,wall
@@ -76,6 +76,9 @@ jwt:
   private.key: classpath:app.key
   public.key: classpath:app.pub
 
+dingtalk:
+  accesstoken: 123
+  secret: 123
 deepseek:
   api:
     key: sk-a47f211da6294b73a17e9f8fe2179b76

@@ -91,11 +91,11 @@
         <!--            <artifactId>feign-core</artifactId>-->
         <!--            <version>13.2.1</version>-->
         <!--        </dependency>-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bootstrap</artifactId>
-            <version>4.0.3</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-bootstrap</artifactId>-->
+<!--            <version>4.0.3</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId> <!-- 用于 WebClient -->
@@ -269,10 +269,10 @@
         </dependency>
 
         <!--Nacos配置相关-->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
+<!--        </dependency>-->
         <!--Nacos服务发现与注册相关-->
 <!--        <dependency>-->
 <!--            <groupId>com.alibaba.cloud</groupId>-->
@@ -298,11 +298,11 @@
             <version>${metadata.version}</version>
         </dependency>
 
-                <dependency>
-                    <groupId>org.springframework.cloud</groupId>
-                    <artifactId>spring-cloud-starter-sleuth</artifactId>
-                    <version>${spring-cloud-starter-sleuth-version}</version>
-                </dependency>
+<!--                <dependency>-->
+<!--                    <groupId>org.springframework.cloud</groupId>-->
+<!--                    <artifactId>spring-cloud-starter-sleuth</artifactId>-->
+<!--                    <version>${spring-cloud-starter-sleuth-version}</version>-->
+<!--                </dependency>-->
 
 <!--        <dependency>-->
 <!--            <groupId>com.nimbusds</groupId>-->

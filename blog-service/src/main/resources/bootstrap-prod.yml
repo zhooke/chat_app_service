@@ -1,24 +1,24 @@
 spring:
   datasource:
     driver-class-name: com.p6spy.engine.spy.P6SpyDriver
-nacos:
-  dataId: application-prod.yaml
-  # 部署服务的内网或外网ip
-  name: application-prod.yaml
-  discovery:
-    ip: hub.tensua.com
-  group: CHAT_APP_GROUP
-  namespace: 40f771e2-365f-43f3-a665-a5faf6b21886
-  password: chat_app
-  #nacos服务绑定的ip
-  server-addr: 101.43.11.226:8848
-  username: chat_app
-  core:
-    auth:
-      server:
-        identity:
-          key: authKey
-          value: zhooke
+#nacos:
+#  dataId: application-prod.yaml
+#  # 部署服务的内网或外网ip
+#  name: application-prod.yaml
+#  discovery:
+#    ip: hub.tensua.com
+#  group: CHAT_APP_GROUP
+#  namespace: 40f771e2-365f-43f3-a665-a5faf6b21886
+#  password: chat_app
+#  #nacos服务绑定的ip
+#  server-addr: 123.57.62.124:8848
+#  username: chat_app
+#  core:
+#    auth:
+#      server:
+#        identity:
+#          key: authKey
+#          value: zhooke
 #nacos:
 #  config:
 #    server-addr: 101.43.11.226:8848

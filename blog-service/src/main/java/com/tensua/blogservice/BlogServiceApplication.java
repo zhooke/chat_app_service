@@ -4,7 +4,6 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @author zhooke
@@ -12,7 +11,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  **/
 //@EnableFeignClients(basePackageClasses = {UserFeignClient.class})
 @SpringBootApplication
-@EnableDiscoveryClient
+// @EnableDiscoveryClient
 @EntityScan("com.tensua.blogservice.*.entity")
 @MapperScan({"com.tensua.blogservice.operator.*.mapper"})
 public class BlogServiceApplication {

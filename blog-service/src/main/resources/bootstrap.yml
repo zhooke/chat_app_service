@@ -10,37 +10,37 @@ spring:
       matching-strategy: ant_path_matcher
   application:
     name: blog-service   #唯一名称
-  cloud:
-    nacos:
-      config:
-        name: ${nacos.name}
-        server-addr: ${nacos.server-addr}
-        file-extension: yaml
-        namespace: ${nacos.namespace}
-        group: ${nacos.group}
-        shared-configs:
-          - data-id: ${nacos.dataId}
-            group: ${nacos.group}
-            refresh: true
-        password: ${nacos.password}
-        username: ${nacos.username}
-      discovery:
-        server-addr: ${nacos.server-addr}
-        namespace: ${nacos.namespace}
-        group: ${nacos.group}
-        ip: ${nacos.discovery.ip}
-        password: ${nacos.password}
-        username: ${nacos.username}
+#  cloud:
+#    nacos:
+#      config:
+#        name: ${nacos.name}
+#        server-addr: ${nacos.server-addr}
+#        file-extension: yaml
+#        namespace: ${nacos.namespace}
+#        group: ${nacos.group}
+#        shared-configs:
+#          - data-id: ${nacos.dataId}
+#            group: ${nacos.group}
+#            refresh: true
+#        password: ${nacos.password}
+#        username: ${nacos.username}
+#      discovery:
+#        server-addr: ${nacos.server-addr}
+#        namespace: ${nacos.namespace}
+#        group: ${nacos.group}
+#        ip: ${nacos.discovery.ip}
+#        password: ${nacos.password}
+#        username: ${nacos.username}
 
   servlet:
     multipart:
       max-file-size: 50MB
   data:
     redis:
-      host: ${spring.redis.host}
-      password: ${spring.redis.password}
-      port: ${spring.redis.port}
-      database: ${spring.redis.database}
+      host: 8.148.67.7
+      password: c6e553cfd3d84b5281dd2676d555cb47
+      port: 56379
+      database: 0
       timeout: 5000
       jedis:
         pool:
